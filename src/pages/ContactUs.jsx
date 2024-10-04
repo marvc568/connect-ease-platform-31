@@ -22,10 +22,13 @@ const ContactUs = () => {
         <h1 className="text-3xl font-bold mb-8 text-center">اتصل بنا</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-20"></div>
-            <div className="relative z-10">
+            <div 
+              className="absolute inset-0 bg-cover bg-center z-0" 
+              style={{backgroundImage: "url('/customer-service.jpg')"}}
+            ></div>
+            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div className="relative z-20 text-white">
               <h2 className="text-xl font-semibold mb-4">خدمة العملاء</h2>
-              <img src="/customer-service.jpg" alt="خدمة العملاء" className="w-full h-48 object-cover rounded-lg mb-4" />
               <p className="mb-4">للتواصل مع خدمة العملاء، يرجى الاتصال على الأرقام التالية:</p>
               <ul className="list-disc list-inside mb-4">
                 <li>0123456789</li>
@@ -37,16 +40,16 @@ const ContactUs = () => {
               {showSupportForm && (
                 <form onSubmit={handleSubmit} className="mt-4 space-y-4">
                   <div>
-                    <Label htmlFor="name">الاسم</Label>
-                    <Input id="name" type="text" placeholder="أدخل اسمك" required />
+                    <Label htmlFor="name" className="text-white">الاسم</Label>
+                    <Input id="name" type="text" placeholder="أدخل اسمك" required className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <div>
-                    <Label htmlFor="email">البريد الإلكتروني</Label>
-                    <Input id="email" type="email" placeholder="أدخل بريدك الإلكتروني" required />
+                    <Label htmlFor="email" className="text-white">البريد الإلكتروني</Label>
+                    <Input id="email" type="email" placeholder="أدخل بريدك الإلكتروني" required className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <div>
-                    <Label htmlFor="message">الرسالة</Label>
-                    <Textarea id="message" placeholder="اكتب رسالتك هنا" required />
+                    <Label htmlFor="message" className="text-white">الرسالة</Label>
+                    <Textarea id="message" placeholder="اكتب رسالتك هنا" required className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
                   <Button type="submit">إرسال</Button>
                 </form>
