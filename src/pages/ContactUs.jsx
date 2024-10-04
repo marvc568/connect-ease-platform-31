@@ -25,6 +25,7 @@ const ContactUs = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-20"></div>
             <div className="relative z-10">
               <h2 className="text-xl font-semibold mb-4">خدمة العملاء</h2>
+              <img src="/customer-service.jpg" alt="خدمة العملاء" className="w-full h-48 object-cover rounded-lg mb-4" />
               <p className="mb-4">للتواصل مع خدمة العملاء، يرجى الاتصال على الأرقام التالية:</p>
               <ul className="list-disc list-inside mb-4">
                 <li>0123456789</li>
