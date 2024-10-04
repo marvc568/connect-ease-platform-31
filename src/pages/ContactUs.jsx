@@ -24,17 +24,20 @@ const ContactUs = () => {
           <div className="bg-white rounded-lg shadow-md p-6 relative overflow-hidden">
             <div 
               className="absolute inset-0 bg-cover bg-center z-0" 
-              style={{backgroundImage: "url('/customer-service.jpg')"}}
+              style={{
+                backgroundImage: "url('/customer-service.jpg')",
+                opacity: 0.7
+              }}
             ></div>
-            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div className="absolute inset-0 bg-gray-900 opacity-50 z-10"></div>
             <div className="relative z-20 text-white">
-              <h2 className="text-xl font-semibold mb-4">خدمة العملاء</h2>
+              <h2 className="text-2xl font-semibold mb-4">خدمة العملاء</h2>
               <p className="mb-4">للتواصل مع خدمة العملاء، يرجى الاتصال على الأرقام التالية:</p>
               <ul className="list-disc list-inside mb-4">
                 <li>0123456789</li>
                 <li>9876543210</li>
               </ul>
-              <Button onClick={() => setShowSupportForm(!showSupportForm)}>
+              <Button onClick={() => setShowSupportForm(!showSupportForm)} className="bg-white text-gray-900 hover:bg-gray-200">
                 {showSupportForm ? 'إغلاق النموذج' : 'ارسل لنا طلبك'}
               </Button>
               {showSupportForm && (
@@ -51,7 +54,7 @@ const ContactUs = () => {
                     <Label htmlFor="message" className="text-white">الرسالة</Label>
                     <Textarea id="message" placeholder="اكتب رسالتك هنا" required className="bg-white bg-opacity-20 text-white placeholder-gray-300" />
                   </div>
-                  <Button type="submit">إرسال</Button>
+                  <Button type="submit" className="bg-white text-gray-900 hover:bg-gray-200">إرسال</Button>
                 </form>
               )}
             </div>
