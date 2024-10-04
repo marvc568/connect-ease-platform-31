@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import SuccessStory from '../components/SuccessStory';
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
             انضم الآن واستمتع بتجربة فريدة تساعدك على النمو والتوسع. لا تدع الفرصة تفوتك – كن جزءًا من Green Light اليوم وحقق النجاح الذي تطمح إليه!
           </p>
         </div>
-        <SuccessStory />
       </main>
     </div>
   );
