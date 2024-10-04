@@ -12,6 +12,14 @@ const Register = () => {
     console.log('تم إنشاء الحساب');
   };
 
+  const steps = [
+    "سجل بياناتك (اسمك، إيميلك، ورقم هاتفك).",
+    "حدد نوع النشاط التجاري.",
+    "أدخل البيانات الأساسية للمحل.",
+    "اعرض منتجاتك.",
+    "حمل تطبيق \"طلباتك للمحلات\" وابدأ في استلام الطلبات."
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -86,6 +94,14 @@ const Register = () => {
               <Button type="submit" className="w-full">تسجيل</Button>
             </div>
           </form>
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold mb-4">خطوات إنشاء الحساب في GreenLight</h3>
+            <ol className="list-decimal list-inside space-y-2">
+              {steps.map((step, index) => (
+                <li key={index} className="text-lg">{step}</li>
+              ))}
+            </ol>
+          </div>
         </div>
       </main>
     </div>

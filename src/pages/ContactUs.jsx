@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Header from '../components/Header';
+import { Facebook, Linkedin, Instagram } from 'lucide-react';
 
 const ContactUs = () => {
   const [showSupportForm, setShowSupportForm] = useState(false);
@@ -21,7 +22,7 @@ const ContactUs = () => {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8 text-center">اتصل بنا</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white rounded-lg shadow-md p-6" style={{backgroundImage: "url('/path/to/customer-service-background.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <h2 className="text-xl font-semibold mb-4">خدمة العملاء</h2>
             <p className="mb-4">للتواصل مع خدمة العملاء، يرجى الاتصال على الأرقام التالية:</p>
             <ul className="list-disc list-inside mb-4">
@@ -49,7 +50,7 @@ const ContactUs = () => {
               </form>
             )}
           </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white rounded-lg shadow-md p-6" style={{backgroundImage: "url('/path/to/technical-support-background.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <h2 className="text-xl font-semibold mb-4">الدعم الفني</h2>
             <p className="mb-4">للحصول على الدعم الفني، يرجى التواصل معنا عبر:</p>
             <ul className="list-disc list-inside mb-4">
@@ -58,9 +59,15 @@ const ContactUs = () => {
             </ul>
             <h3 className="text-lg font-medium mb-2">تواصل معنا</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-600 hover:underline">LinkedIn</a>
-              <a href="#" className="text-blue-600 hover:underline">Instagram</a>
-              <a href="#" className="text-blue-600 hover:underline">Facebook</a>
+              <a href="#" className="text-blue-600 hover:text-blue-800">
+                <Linkedin size={24} />
+              </a>
+              <a href="#" className="text-pink-600 hover:text-pink-800">
+                <Instagram size={24} />
+              </a>
+              <a href="#" className="text-blue-800 hover:text-blue-900">
+                <Facebook size={24} />
+              </a>
             </div>
           </div>
         </div>
