@@ -28,10 +28,7 @@ const Header = () => {
                     <Link to="/contact" className="w-full">خدمة العملاء</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link to="/technical-support" className="w-full">الدعم الفني</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link to="/social-media" className="w-full">تواصل معنا</Link>
+                    <Link to="/support" className="w-full">الدعم الفني</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

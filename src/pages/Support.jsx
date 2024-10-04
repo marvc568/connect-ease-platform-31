@@ -16,11 +16,19 @@ const Support = () => {
     <div className="min-h-screen bg-gray-100">
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-20"></div>
-          <div className="relative z-10">
-            <h2 className="text-2xl font-semibold mb-6 text-center">الدعم الفني</h2>
-            <p className="mb-6 text-center">نحن هنا لمساعدتك في أي مشكلة تقنية تواجهها. يرجى ملء النموذج أدناه وسنتواصل معك في أقرب وقت ممكن.</p>
+        <h1 className="text-3xl font-bold mb-8 text-center">الدعم الفني</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-xl font-semibold mb-4">معلومات الاتصال</h2>
+            <p className="mb-4">للحصول على الدعم الفني، يرجى التواصل معنا عبر:</p>
+            <ul className="list-disc list-inside mb-4">
+              <li>البريد الإلكتروني: support@example.com</li>
+              <li>رقم الهاتف: 1234567890</li>
+            </ul>
+            <p>ساعات العمل: من الاثنين إلى الجمعة، 9 صباحًا - 5 مساءً</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-xl font-semibold mb-4">نموذج طلب المساعدة</h2>
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div>
